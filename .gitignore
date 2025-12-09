@@ -1,81 +1,38 @@
-
 # Ignore everything by default
 *
 
 # Keep this file tracked
 !.gitignore
 
-# Allow directories (so negated patterns inside them can match)
+# Allow directories so nested negations can match
 !*/
 
-# Whitelist common design directories (and their contents)
-!themes/
-!themes/**
-!theme/
-!Theme/
-!Themes/
-!wallpapers/
-!wallpapers/**
-!icons/
-!icons/**
-!fonts/
-!fonts/**
-!assets/
-!assets/**
-!images/
-!images/**
-!design/
-!design/**
-!graphics/
-!graphics/**
-!sprites/
-!sprites/**
+# --- Whitelist only the Cute Fox files (explicit paths) ---
+!/waybar/config
+!/waybar/style.css
+!/waybar/video/Cute_fox.webp
 
-# Common config/style directories often holding design assets
-!gtk-3.0/
-!gtk-3.0/**
-!gtk-4.0/
-!gtk-4.0/**
-!waybar/
-!waybar/**
-!wofi/
-!wofi/**
-!hypr/
-!hypr/**
-!obs-studio/
-!obs-studio/**
-!spicetify/
-!spicetify/**
+!/wofi/config
+!/wofi/style.css
 
-# Whitelist design file types anywhere in the tree
-!*.svg
-!*.png
-!*.jpg
-!*.jpeg
-!*.gif
-!*.webp
-!*.bmp
-!*.psd
-!*.xcf
-!*.ai
-!*.eps
-!*.sketch
-!*.fig
-!*.ico
-!*.icns
-!*.theme
-!*.css
-!*.scss
-!*.sass
-!*.less
-!*.otf
-!*.ttf
-!*.woff
-!*.woff2
+!/vesktop/settings/quickCss.css
 
-# Allow README/design notes
-!README*
-!README.md
+!/spicetify/Themes/FoxPastel/color.ini
 
-# End of design-focused ignore rules
+!/nvim/colors/fox.lua
+
+!/kitty/kitty.conf
+
+!/hypr/hyprland.conf
+!/hypr/hyprlock.conf
+!/hypr/hypridle.conf
+
+!/gtk-4.0/gtk.css
+!/gtk-3.0/gtk.css
+
+!/dunst/dunstrc
+
+!/Code/User/settings.json
+
+# End Cute Fox-only whitelist
 

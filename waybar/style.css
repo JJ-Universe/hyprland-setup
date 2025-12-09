@@ -1,0 +1,139 @@
+/* Cute Fox pastel theme tuned for the provided wallpaper. GTK CSS only; no custom properties. */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "IBM Plex Sans", "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #f7e6df;
+}
+
+tooltip {
+    background: rgba(44, 31, 48, 0.94);
+    border-radius: 12px;
+    border: 1px solid rgba(250, 215, 206, 0.38);
+    color: #f7e6df;
+    padding: 8px 10px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: linear-gradient(135deg, rgba(44, 31, 48, 0.76) 0%, rgba(52, 38, 58, 0.62) 100%);
+    border: 1px solid rgba(250, 215, 206, 0.38);
+    margin: 6px 8px;
+    padding: 6px 12px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), 0 0 14px rgba(255, 175, 123, 0.24);
+}
+
+.modules-left { margin-left: 12px; }
+.modules-right { margin-right: 12px; }
+
+.modules-left > * + *,
+.modules-center > * + *,
+.modules-right > * + * {
+    border-left: 1px solid rgba(250, 215, 206, 0.38);
+    padding-left: 12px;
+    margin-left: 10px;
+}
+
+.modules-center {
+    min-width: 380px;
+}
+
+.modules-center > * { margin: 0 6px; }
+
+#workspaces button {
+    padding: 4px 10px 3px 10px;
+    color: #d6c0c8;
+    border-radius: 11px;
+    transition: color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    background: transparent;
+    box-shadow: inset 0 -2px transparent;
+}
+
+#workspaces button.focused {
+    color: #f7e6df;
+    box-shadow: inset 0 -2px #ffaf7b, inset 0 -5px rgba(212, 165, 255, 0.55);
+    background: rgba(255, 196, 160, 0.18);
+    text-shadow: 0 0 4px rgba(255, 175, 123, 0.6);
+}
+
+#workspaces button:hover {
+    color: #f7e6df;
+    background: rgba(255, 216, 168, 0.18);
+    box-shadow: inset 0 -2px rgba(255, 175, 123, 0.6);
+}
+
+#workspaces button.urgent {
+    color: #2c1f30;
+    background: #d4a5ff;
+    box-shadow: inset 0 -3px #ff9db5;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#backlight,
+#network,
+#pulseaudio,
+#power-profiles-daemon,
+#custom-media,
+#tray,
+#mode,
+#custom-power,
+#custom-hint,
+#custom-logo,
+#window,
+#submap {
+    padding: 0 10px;
+    color: #f7e6df;
+}
+
+#custom-logo {
+    font-size: 17px;
+    padding-left: 4px;
+    padding-right: 6px;
+    color: #ffaf7b;
+}
+
+#submap {
+    color: #ffd8a8;
+    font-style: italic;
+}
+
+#window {
+    color: #d6c0c8;
+    font-weight: 600;
+}
+
+#clock {
+    color: #ffd8a8;
+    font-weight: 700;
+}
+
+#cpu { color: #b7f2c0; }
+#memory { color: #ffe4b8; }
+#temperature { color: #ffd1ce; }
+#pulseaudio { color: #ffd8a8; }
+#pulseaudio.muted { color: #9c8ca0; }
+#custom-media { color: #f6c4ff; }
+#custom-media.playing { color: #ffaf7b; }
+#custom-hint { color: #ffd8a8; }
+#power-profiles-daemon { color: #ffaf7b; }
+
+#network { color: #c6e6ff; }
+#network.disconnected { color: #ff9db5; }
+
+#custom-power {
+    color: #ffaf7b;
+    margin-left: 12px;
+    padding-right: 6px;
+}

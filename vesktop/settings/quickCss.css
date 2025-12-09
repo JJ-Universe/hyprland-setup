@@ -1,0 +1,270 @@
+/**
+ * THEME: Fox Pastel – Sunlit Shadows (patched)
+ * Notes:
+ * - Updated selectors to be less brittle where possible.
+ * - Stronger contrasts on text/inputs.
+ * - Safer borders and hovers; reduced bleed.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  /* ---- Core Palette ---- */
+  --fox-bg-deep:       #2E2235;
+  --fox-bg-panel:      #251b2b;
+  --fox-bg-floating:   #3b2d45;
+  --fox-bg-muted:      #1f1726;
+
+  --fox-accent-1:      #FFAF7B;
+  --fox-accent-2:      #D4A5FF;
+  --fox-accent-subtle: #FFD8A8;
+
+  --fox-text-main:     #F3D1C8;
+  --fox-text-dim:      #b9a8b1;   /* slightly brighter for readability */
+  --fox-text-strong:   #FFE6DB;
+
+  /* ---- Terminal / Code ---- */
+  --term-bg:           #1E1E2E;
+  --term-fg:           #6D5A5A;
+  --term-select-bg:    #DC8A78;
+  --term-select-fg:    #EFF1F5;
+
+  /* ---- Decor ---- */
+  --fox-radius:        12px;
+  --fox-spacing:       12px;
+  --fox-border:        1px solid #3f304a; /* clearer base border */
+  --gradient-main:     linear-gradient(45deg, var(--fox-accent-1), var(--fox-accent-2));
+
+  --active-border:     var(--gradient-main);
+  --inactive-border:   #3f304a;
+
+  --fox-shadow-soft:   0 8px 24px rgba(0, 0, 0, 0.32);
+}
+
+/* ---- 1) Global ---- */
+.theme-dark, .theme-light, #app-mount {
+  --background-primary:   var(--fox-bg-deep);
+  --background-secondary: var(--fox-bg-deep);
+  --background-tertiary:  var(--fox-bg-deep);
+  --background-floating:  var(--fox-bg-floating);
+
+  --header-primary:   var(--fox-text-strong);
+  --header-secondary: var(--fox-text-dim);
+  --text-normal:      var(--fox-text-main);
+  --text-muted:       var(--fox-text-dim);
+
+  --interactive-normal:  var(--fox-text-dim);
+  --interactive-hover:   var(--fox-text-main);
+  --interactive-active:  var(--fox-accent-1);
+
+  --scrollbar-auto-thumb: var(--fox-bg-floating);
+  --scrollbar-auto-track: transparent;
+
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace !important;
+}
+
+/* ---- 2) Layout Containers ---- */
+
+/* Server rail */
+.scroller_fea3ef,
+.guilds_c48ade {
+  background-color: var(--fox-bg-deep) !important;
+}
+
+/* Sidebar */
+.sidebar_c25f6d {
+  background: transparent !important;
+  margin: var(--fox-spacing) 0 var(--fox-spacing) var(--fox-spacing);
+}
+.sidebar_c25f6d nav,
+.sidebar-1tnWFu {
+  background-color: var(--fox-bg-panel) !important;
+  border-radius: var(--fox-radius);
+  height: 100%;
+  box-shadow: var(--fox-shadow-soft);
+  border: var(--fox-border);
+}
+
+/* Chat */
+.chat_f75fb0,
+.chat-2ZfjoI {
+  background: transparent !important;
+  margin: var(--fox-spacing);
+}
+.chatContent_f75fb0,
+.container-2cd8Mz {
+  background-color: var(--fox-bg-panel) !important;
+  border-radius: var(--fox-radius);
+  box-shadow: var(--fox-shadow-soft);
+  border: var(--fox-border);
+}
+
+/* Members */
+.container_c8ffbb,
+.container-2o3qEW {
+  background: transparent !important;
+  margin: var(--fox-spacing) var(--fox-spacing) var(--fox-spacing) 0;
+}
+.members_c8ffbb,
+.members-3WRCEx {
+  background-color: var(--fox-bg-panel) !important;
+  border-radius: var(--fox-radius);
+  box-shadow: var(--fox-shadow-soft);
+  border: var(--fox-border);
+}
+
+/* ---- 3) Active States & Gradient Accents ---- */
+.modeSelected_d2ba3a .link_d2ba3a,
+.modeSelected-3DmyhH .link-39sEB3 {
+  background: rgba(255, 175, 123, 0.08);
+  position: relative;
+  border-radius: 10px;
+}
+.modeSelected_d2ba3a .link_d2ba3a::before,
+.modeSelected-3DmyhH .link-39sEB3::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--gradient-main);
+  border-radius: 4px;
+}
+.modeSelected_d2ba3a .name_d2ba3a,
+.modeSelected-3DmyhH .name-28HaxV {
+  color: var(--fox-accent-1) !important;
+}
+
+/* Home button */
+[data-list-item-id="guildsnav___home"] > div {
+  background: var(--fox-bg-panel);
+  border-radius: 10px;
+}
+[data-list-item-id="guildsnav___home"]:hover > div {
+  background: var(--gradient-main);
+}
+
+/* Server selection pill */
+.item_c4cd66 {
+  background: var(--gradient-main) !important;
+  width: 4px;
+  border-radius: 999px;
+}
+
+/* ---- 4) User Panel & Inputs ---- */
+section[class^="panels_"],
+.panels-3wFtMD {
+  background-color: var(--fox-bg-floating) !important;
+  border-radius: var(--fox-radius);
+  margin-bottom: var(--fox-spacing);
+  margin-left: var(--fox-spacing);
+  border-bottom: 2px solid transparent;
+  border-image: var(--gradient-main);
+  border-image-slice: 1;
+  box-shadow: var(--fox-shadow-soft);
+}
+
+.form_f75fb0,
+.form-3gdLxP { margin-top: 0; padding: 0; }
+
+.channelTextArea_f75fb0,
+.channelTextArea-1FufC0 {
+  background: var(--fox-bg-deep) !important;
+  border-radius: var(--fox-radius);
+  border: var(--fox-border);
+  transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.channelTextArea_f75fb0:focus-within,
+.channelTextArea-1FufC0:focus-within {
+  border-color: transparent;
+  border-image: var(--active-border);
+  border-image-slice: 1;
+  box-shadow: 0 0 8px rgba(212, 165, 255, 0.28);
+  background: #2a1f32;
+}
+
+/* ---- 5) Buttons ---- */
+.button_f73234, .lookFilled_yHqWX,
+.button-38aScr, .lookFilled-1Gx00P {
+  border-radius: 10px !important;
+}
+.lookFilled_yHqWX.colorBrand-3pXr91,
+.lookFilled-1Gx00P.colorBrand-3pXr91 {
+  background: var(--gradient-main) !important;
+  color: #1b0f1f !important;
+  box-shadow: 0 4px 14px rgba(255, 175, 123, 0.35);
+}
+.lookFilled_yHqWX.colorBrand-3pXr91:hover,
+.lookFilled-1Gx00P.colorBrand-3pXr91:hover {
+  filter: brightness(1.05);
+}
+
+/* ---- 6) Code / Terminal ---- */
+code, .markup-eYLPri code {
+  background-color: var(--term-bg) !important;
+  color: var(--term-fg) !important;
+  font-family: "JetBrainsMono Nerd Font", monospace !important;
+  border: 1px solid var(--fox-bg-floating);
+  border-radius: 6px;
+}
+.hljs {
+  background-color: var(--term-bg) !important;
+  color: var(--term-fg) !important;
+}
+::selection {
+  background: var(--term-select-bg) !important;
+  color: var(--term-select-fg) !important;
+}
+
+/* ---- 7) Mentions / Pills ---- */
+.mention, .mentionWrapper-1ZOnjm {
+  background: rgba(255, 216, 168, 0.15) !important;
+  color: var(--fox-accent-1) !important;
+  border-radius: 8px;
+  padding: 0 6px;
+}
+
+/* ---- 8) Tooltips / Popouts ---- */
+.tooltip-14MtrL, .container-1gYwHN, .userPopout-3XzG_A,
+.tooltip-33Jwqe, .userPopout-2j1gM4 {
+  background: var(--fox-bg-floating) !important;
+  border: 1px solid #3f304a;
+  border-radius: var(--fox-radius);
+  box-shadow: var(--fox-shadow-soft);
+}
+
+/* ---- 9) Borders (Active / Inactive) ---- */
+.container_c8ffbb, .chatContent_f75fb0, .sidebar_c25f6d nav,
+.container-2o3qEW, .container-2cd8Mz, .sidebar-1tnWFu {
+  border: var(--fox-border);
+}
+.container_c8ffbb:focus-within,
+.chatContent_f75fb0:focus-within,
+.sidebar_c25f6d nav:focus-within,
+.container-2o3qEW:focus-within,
+.container-2cd8Mz:focus-within,
+.sidebar-1tnWFu:focus-within {
+  border: 1px solid transparent;
+  border-image: var(--active-border);
+  border-image-slice: 1;
+}
+
+/* ---- Optional: Light Cream Variant (toggle) ---- */
+/*
+:root {
+  --fox-bg-deep:     #FFF2E5;
+  --fox-bg-panel:    #FFE7D7;
+  --fox-bg-floating: #FFDCC7;
+  --fox-bg-muted:    #F9D7C4;
+
+  --fox-text-main:   #6D5A5A;
+  --fox-text-dim:    #8a7575;
+  --fox-text-strong: #4A403A;
+
+  --term-bg:         #FFF5EA;
+  --term-fg:         #6D5A5A;
+  --term-select-bg:  #FFDAC1;
+  --term-select-fg:  #4A403A;
+
+  --inactive-border: #FFE7D7;
+}
+*/

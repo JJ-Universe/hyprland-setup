@@ -1,0 +1,38 @@
+window, dialog, popover, .background {
+    background: #fff5ea;
+    color: #2e2235;
+}
+
+button, entry, spinbutton, notebook, treeview, list {
+    background: #f9ecdf;
+    color: #2e2235;
+    border: 1px solid rgba(255,175,123,0.55);
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+button:hover {
+    box-shadow: 0 0 6px rgba(255,175,123,0.35);
+}
+
+button:active {
+    background: #ffaf7b;
+    color: #fff5ea;
+    box-shadow: 0 0 6px rgba(212,165,255,0.35);
+}
+
+entry:focus, button:focus {
+    border-color: #d4a5ff;
+    box-shadow: 0 0 6px rgba(212,165,255,0.35);
+}
+
+selection, textview text selection, entry selection {
+    background: linear-gradient(90deg, #ffaf7b 0%, #d4a5ff 100%);
+    color: #fff5ea;
+}
+
+headerbar, .titlebar {
+    background: #f9ecdf;
+    color: #2e2235;
+    border-bottom: 1px solid rgba(255,175,123,0.55);
+}

@@ -1,0 +1,20 @@
+[global]
+    frame_color = "#ffaf7b"
+    separator_color = "#ffaf7b"
+    corner_radius = 12
+    transparency = 5
+    font = JetBrainsMono Nerd Font 11
+
+[urgency_low]
+    background = "#2e2235"
+    foreground = "#f3d1c8"
+
+[urgency_normal]
+    background = "#34263a"
+    foreground = "#f3d1c8"
+    frame_color = "#ffaf7b"
+
+[urgency_critical]
+    background = "#3a263f"
+    foreground = "#fff2e5"
+    frame_color = "#ff9db5"

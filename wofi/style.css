@@ -1,0 +1,72 @@
+/* General Window Setup */
+window {
+    margin: 0px;
+    padding: 6px;
+    border: none;
+    background-color: #2e2235;
+    border-radius: 10px;
+    background-clip: padding-box;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+/* The Main Input Bar */
+#input {
+    margin: 5px;
+    border: none;
+    color: #f3d1c8;
+    background-color: #34263a;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* The Inner List Container */
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+/* The Individual Entries */
+#entry {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    color: #f3d1c8;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* The Entry Container (Layout) */
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Scrolling Area */
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+/* Text inside entries */
+#text {
+    margin: 5px;
+    border: none;
+    color: #f3d1c8;
+}
+
+/* Selected Entry (Active Item) */
+#entry:selected {
+    background: linear-gradient(90deg, #ffaf7b 0%, #d4a5ff 100%);
+    color: #2e2235;
+    font-weight: 700;
+}
+
+/* Selected Text specifically (sometimes needed to override) */
+#entry:selected #text {
+    color: #2e2235;
+}
+
