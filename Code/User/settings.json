@@ -32,5 +32,6 @@
 	"workbench.colorTheme": "Default Dark Modern",
 	"workbench.preferredDarkColorTheme": "Default Dark Modern",
 	"editor.fontFamily": "JetBrainsMono Nerd Font, FiraCode Nerd Font, monospace",
-	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font"
+	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+	"git.autofetch": true
 }
