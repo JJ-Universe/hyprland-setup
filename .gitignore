@@ -1,0 +1,81 @@
+
+# Ignore everything by default
+*
+
+# Keep this file tracked
+!.gitignore
+
+# Allow directories (so negated patterns inside them can match)
+!*/
+
+# Whitelist common design directories (and their contents)
+!themes/
+!themes/**
+!theme/
+!Theme/
+!Themes/
+!wallpapers/
+!wallpapers/**
+!icons/
+!icons/**
+!fonts/
+!fonts/**
+!assets/
+!assets/**
+!images/
+!images/**
+!design/
+!design/**
+!graphics/
+!graphics/**
+!sprites/
+!sprites/**
+
+# Common config/style directories often holding design assets
+!gtk-3.0/
+!gtk-3.0/**
+!gtk-4.0/
+!gtk-4.0/**
+!waybar/
+!waybar/**
+!wofi/
+!wofi/**
+!hypr/
+!hypr/**
+!obs-studio/
+!obs-studio/**
+!spicetify/
+!spicetify/**
+
+# Whitelist design file types anywhere in the tree
+!*.svg
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
+!*.webp
+!*.bmp
+!*.psd
+!*.xcf
+!*.ai
+!*.eps
+!*.sketch
+!*.fig
+!*.ico
+!*.icns
+!*.theme
+!*.css
+!*.scss
+!*.sass
+!*.less
+!*.otf
+!*.ttf
+!*.woff
+!*.woff2
+
+# Allow README/design notes
+!README*
+!README.md
+
+# End of design-focused ignore rules
+
